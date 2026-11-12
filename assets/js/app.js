@@ -22,13 +22,13 @@
   const svg = (k) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k] || ICON.xga}</svg>`;
 
   const CATS = [
-    { id: "all", label: "Semua Proyektor", desc: "Seluruh lini proyektor 3LCD Epson Corporate & Education — warna cerah, tajam, dan andal." },
+    { id: "all", label: "Semua Proyektor", desc: "Seluruh lini proyektor 3LCD Epson Corporate & Education — warna cerah, tajam dan andal." },
     { id: "xga", label: "XGA · Kelas & Rapat", desc: "Proyektor rasio 4:3 (1024×768) ekonomis dan terang untuk ruang kelas maupun ruang rapat." },
     { id: "wxga", label: "WXGA · Layar Lebar", desc: "Resolusi layar lebar 16:10 (1280×800) ideal untuk presentasi laptop modern." },
     { id: "fhd", label: "Full HD & WUXGA", desc: "Ketajaman tinggi 1080p dan WUXGA (1920×1200) untuk presentasi detail & multimedia." },
     { id: "short", label: "Short Throw", desc: "Proyeksi layar besar dari jarak dekat — meminimalkan bayangan dan silau presenter." },
     { id: "laser", label: "Proyektor Laser", desc: "Sumber cahaya laser dengan kontras > 5.000.000:1 dan umur pakai hingga 20.000 jam." },
-    { id: "venue", label: "Ruang Besar · 5000+ lm", desc: "Kecerahan tinggi 5.000 – 5.500 lumens untuk aula, auditorium, dan ruang konferensi besar." },
+    { id: "venue", label: "Ruang Besar · 5000+ lm", desc: "Kecerahan tinggi 5.000 – 5.500 lumens untuk aula, auditorium dan ruang konferensi besar." },
   ];
   const FEATURES = [
     { id: "laser", label: "Sumber Laser", test: (p) => p.lightSource === "Laser" },
@@ -46,7 +46,7 @@
   const RES_INFO = {
     "XGA":     { pixels: "1024 × 768 · Rasio 4:3", desc: "Standar ruang kelas & presentasi dokumen dasar", color: "#0a84ff" },
     "WXGA":    { pixels: "1280 × 800 · Rasio 16:10", desc: "Layar lebar standar laptop bisnis & kantor", color: "#30d158" },
-    "Full HD": { pixels: "1920 × 1080 · Rasio 16:9", desc: "Ketajaman 1080p untuk video, desain, & ruang rapat modern", color: "#af52de" },
+    "Full HD": { pixels: "1920 × 1080 · Rasio 16:9", desc: "Ketajaman 1080p untuk video, desain & ruang rapat modern", color: "#af52de" },
     "WUXGA":   { pixels: "1920 × 1200 · Rasio 16:10", desc: "Resolusi tertinggi untuk spreadsheet & aula konferensi", color: "#ff9f0a" },
   };
   const catLabel = (id) => CATS.find((c) => c.id === id)?.label || id;
@@ -384,7 +384,7 @@
       <h4>Pintasan keyboard</h4>
       <ul><li><b>⌘K / Ctrl+K</b> atau <b>/</b> — Spotlight</li><li><b>Esc</b> — tutup jendela</li></ul>
       <p class="note">Harga tidak tersedia di situs resmi. Spesifikasi dapat berubah sewaktu-waktu; selalu verifikasi di situs resmi Epson.
-      Epson, 3LCD, dan gambar produk adalah merek/hak milik Seiko Epson Corporation.</p>
+      Epson, 3LCD dan gambar produk adalah merek/hak milik Seiko Epson Corporation.</p>
     </div>`, "about");
   }
 

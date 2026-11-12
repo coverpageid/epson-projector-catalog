@@ -23,7 +23,7 @@ CURATED = {
     "EB-W50":    ("wxga",  "Proyektor WXGA 3.800 lumens kontras tinggi 20.000:1 untuk korporat & signage.", "WXGA", "16:10", 3800, "3.800 lm", "20.000:1", "Lampu", 2, "builtin", True, False, False, "—"),
     "EB-W53":    ("wxga",  "Generasi baru layar lebar WXGA 4.000 lumens dengan 2 port HDMI.", "WXGA", "16:10", 4000, "4.000 / 2.600 lm", "16.000:1", "Lampu", 2, "none", False, False, False, "2W"),
     "EB-W55":    ("wxga",  "Generasi baru WXGA 4.000 lumens dengan Wi-Fi Built-in untuk presentasi nirkabel.", "WXGA", "16:10", 4000, "4.000 / 2.600 lm", "16.000:1", "Lampu", 2, "builtin", False, False, False, "2W"),
-    "EB-982W":   ("wxga",  "Proyektor WXGA 4.200 lumens dengan speaker 16W, 2× HDMI, dan RJ45 LAN.", "WXGA", "16:10", 4200, "4.200 lm", "16.000:1", "Lampu", 2, "optional", True, False, False, "16W"),
+    "EB-982W":   ("wxga",  "Proyektor WXGA 4.200 lumens dengan speaker 16W, 2× HDMI dan RJ45 LAN.", "WXGA", "16:10", 4200, "4.200 lm", "16.000:1", "Lampu", 2, "optional", True, False, False, "16W"),
     "EB-FH54":   ("fhd",   "Generasi baru Full HD 1080p 4.100 lumens dengan Wi-Fi Built-in & speaker 16W.", "Full HD", "16:9", 4100, "4.100 / 2.300 lm", "16.000:1", "Lampu", 2, "builtin", False, False, True, "16W"),
     "EB-U50":    ("fhd",   "Proyektor WUXGA (1920×1200) 3.700 lumens dengan detail tajam & Wi-Fi.", "WUXGA", "16:10", 3700, "3.700 lm", "16.000:1", "Lampu", 2, "builtin", True, False, False, "5W"),
     "EB-W56S":   ("short", "Generasi baru Short Throw WXGA 3.700 lumens dengan speaker 16W & RJ45 LAN.", "WXGA", "16:10", 3700, "3.700 / 2.000 lm", "16.000:1", "Lampu", 2, "optional", True, True, False, "16W"),

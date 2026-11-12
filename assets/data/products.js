@@ -1020,7 +1020,7 @@ window.PRODUCTS = [
   "url": "https://www.epson.co.id/Projectors/Corporate-and-Education/Epson-EB-982W-WXGA-3LCD-Projector/p/V11H987052",
   "image": "assets/img/V11H987052.jpg",
   "category": "wxga",
-  "tagline": "Proyektor WXGA 4.200 lumens dengan speaker 16W, 2× HDMI, dan RJ45 LAN.",
+  "tagline": "Proyektor WXGA 4.200 lumens dengan speaker 16W, 2× HDMI dan RJ45 LAN.",
   "resolution": "WXGA",
   "aspect": "16:10",
   "lumens": 4200,
