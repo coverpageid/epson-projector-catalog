@@ -14,10 +14,10 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 # model -> (category, tagline, resolution, aspect, lumens_int, lumens_str, contrast, light_source, hdmi_count, wifi_mode, lan, short_throw, mirroring, speaker)
 CURATED = {
     "EB-E01":    ("xga",   "Proyektor XGA paling ekonomis dan ringan untuk kelas & ruang rapat kecil.", "XGA", "4:3", 3300, "3.300 lm", "15.000:1", "Lampu", 1, "none", False, False, False, "2W"),
-    "EB-E600":   ("xga",   "Proyektor TKDN XGA 3.400 lumens untuk kebutuhan pendidikan dan instansi.", "XGA", "4:3", 3400, "3.400 / 2.200 lm", "15.000:1", "Lampu", 1, "none", False, False, False, "2W"),
+    "EB-E600":   ("xga",   "Proyektor TKDN (55,70%) XGA 3.400 lumens untuk pendidikan dan instansi.", "XGA", "4:3", 3400, "3.400 / 2.200 lm", "15.000:1", "Lampu", 1, "none", False, False, False, "2W"),
     "EB-E12":    ("xga",   "Generasi baru XGA 3.600 lumens dengan 2 port HDMI dalam bodi ringkas 2,4 kg.", "XGA", "4:3", 3600, "3.600 / 2.200 lm", "15.000:1", "Lampu", 2, "none", False, False, False, "2W"),
     "EB-X06":    ("xga",   "Proyektor XGA 3.600 lumens dengan koreksi keystone otomatis dan opsi Wi-Fi.", "XGA", "4:3", 3600, "3.600 lm", "16.000:1", "Lampu", 1, "optional", False, False, False, "2W"),
-    "EB-X600":   ("xga",   "Proyektor TKDN XGA 3.600 lumens dilengkapi port jaringan RJ45 LAN.", "XGA", "4:3", 3600, "3.600 / 2.400 lm", "16.000:1", "Lampu", 1, "optional", True, False, False, "2W"),
+    "EB-X600":   ("xga",   "Proyektor TKDN (55,02%) XGA 3.600 lumens dilengkapi RJ45 LAN & opsi Wi-Fi.", "XGA", "4:3", 3600, "3.600 / 2.400 lm", "16.000:1", "Lampu", 1, "optional", True, False, False, "2W"),
     "EB-X52":    ("xga",   "Generasi baru XGA 3.800 lumens dengan 2× HDMI untuk ruang rapat terang.", "XGA", "4:3", 3800, "3.800 / 2.500 lm", "16.000:1", "Lampu", 2, "optional", False, False, False, "2W"),
     "EB-972":    ("xga",   "Proyektor korporat/pendidikan XGA 4.100 lumens dengan speaker 16W & RJ45 LAN.", "XGA", "4:3", 4100, "4.100 lm", "16.000:1", "Lampu", 2, "optional", True, False, False, "16W"),
     "EB-W50":    ("wxga",  "Proyektor WXGA 3.800 lumens kontras tinggi 20.000:1 untuk korporat & signage.", "WXGA", "16:10", 3800, "3.800 lm", "20.000:1", "Lampu", 2, "builtin", True, False, False, "—"),
@@ -36,7 +36,11 @@ CURATED = {
     "EB-2265U":  ("venue", "Flagship WUXGA 5.500 lumens dengan HDBaseT, Screen Mirroring & 2× HDMI.", "WUXGA", "16:10", 5500, "5.500 / 3.800 lm", "15.000:1", "Lampu", 2, "optional", True, False, True, "16W"),
 }
 NEW_2026 = {"EB-E12", "EB-X52", "EB-W53", "EB-W55", "EB-W56S", "EB-FH54"}
-TKDN = {"EB-E600", "EB-X600"}
+# Nilai TKDN + BMP berdasarkan Katalog Produk Epson TKDN FY25 (hal. 36)
+TKDN = {
+    "EB-E600": "55,70%",
+    "EB-X600": "55,02%",
+}
 DISCONTINUED = {"EB-X500"}
 
 
@@ -84,6 +88,13 @@ def main():
                 except Exception as e:
                     print("img fail", model, e); img_file = ""
         clean_specs = {}
+        if model in TKDN:
+            clean_specs["Sertifikasi TKDN (FY25)"] = {
+                "Total Nilai TKDN + BMP": TKDN[model],
+                "Masa Pakai Lampu (Normal / Eco)": "6.000 jam / 12.000 jam",
+                "Fitur Unggulan": "Split Screen" if model == "EB-E600" else "Split Screen, Auto Vertical Keystone, Horizontal Keystone Adjuster, Wireless Projection (Epson iProjection)",
+                "Referensi": "Katalog Produk Epson TKDN FY25 (Halaman 36)",
+            }
         for c, kv in specs.items():
             if c.startswith("_") or c == "Projectors Facets": continue
             clean_specs[c] = kv
@@ -113,6 +124,7 @@ def main():
             "speaker": speaker,
             "isNew": model in NEW_2026,
             "tkdn": model in TKDN,
+            "tkdnScore": TKDN.get(model, ""),
             "dimensions": dim_raw,
             "weight": weight_raw,
             "specs": clean_specs,

@@ -168,7 +168,7 @@
     if (p.shortThrow) out.push('<span class="pill orange">Short Throw</span>');
     if (p.wifiBuiltin) out.push('<span class="pill green">Wi-Fi Built-in</span>');
     else if (p.wifi) out.push('<span class="pill">Wi-Fi Opsional</span>');
-    if (p.tkdn) out.push('<span class="pill red">TKDN</span>');
+    if (p.tkdn) out.push(`<span class="pill red">TKDN ${esc(p.tkdnScore || "")}</span>`);
     return out.join("");
   }
   const imgTag = (p, cls = "") => p.image
@@ -193,7 +193,7 @@
     g.className = "grid" + (state.view === "list" ? " list" : "");
     g.innerHTML = list.map((p, i) => `
       <article class="card" style="animation-delay:${Math.min(i, 16) * 25}ms">
-        ${p.isNew ? '<span class="badge-new">Baru</span>' : p.tkdn ? '<span class="badge-new tkdn">TKDN</span>' : p.lightSource === "Laser" ? '<span class="badge-new tkdn">Laser</span>' : ""}
+        ${p.isNew ? '<span class="badge-new">Baru</span>' : p.tkdn ? `<span class="badge-new tkdn">TKDN ${esc(p.tkdnScore || "")}</span>` : p.lightSource === "Laser" ? '<span class="badge-new tkdn">Laser</span>' : ""}
         <button class="cmp-toggle ${state.compare.includes(p.model) ? "on" : ""}" data-cmp="${p.model}" title="Tambah ke perbandingan" aria-label="Bandingkan ${p.model}">
           ${svg(state.compare.includes(p.model) ? "check" : "plus")}</button>
         <button class="card-img" data-open="${p.model}" aria-label="Detail ${esc(p.name)}">${imgTag(p)}</button>
@@ -286,6 +286,7 @@
       ["Port HDMI", `${p.hdmi}× HDMI`],
       ["Wireless / LAN", [wifiText !== "—" && wifiText, p.lan && "RJ45 LAN"].filter(Boolean).join(" · ") || "—"],
       ["Speaker", p.speaker || "—"],
+      ["TKDN + BMP", p.tkdn ? p.tkdnScore : "—"],
       ["Berat", p.weight || "—"],
     ];
     const groups = Object.entries(p.specs);
@@ -294,7 +295,7 @@
     const html = `<div class="detail">
       <div class="detail-media">${imgTag(p)}</div>
       <div class="detail-info">
-        <div class="series">${esc(catLabel(p.category))}${p.isNew ? " · Baru 2026" : ""}${p.tkdn ? " · TKDN" : ""}</div>
+        <div class="series">${esc(catLabel(p.category))}${p.isNew ? " · Baru 2026" : ""}${p.tkdn ? ` · TKDN ${esc(p.tkdnScore)}` : ""}</div>
         <h2>${esc(p.name)}</h2>
         <p class="tagline">${esc(p.tagline)}</p>
         <div class="pills">${pills(p)}</div>
@@ -337,7 +338,7 @@
       ["RJ45 LAN", (p) => yn(p.lan), true],
       ["Short Throw", (p) => yn(p.shortThrow), true],
       ["Screen Mirroring", (p) => yn(p.mirroring), true],
-      ["TKDN", (p) => yn(p.tkdn), true],
+      ["TKDN + BMP", (p) => p.tkdn ? `<span class="yes">✓ ${esc(p.tkdnScore || "Ya")}</span>` : '<span class="no">—</span>', true],
       ["Speaker", (p) => p.speaker || "—"],
       ["Dimensi", (p) => p.dimensions || "—"],
       ["Berat", (p) => p.weight || "—"],
