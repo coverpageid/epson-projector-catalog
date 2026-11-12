@@ -384,7 +384,7 @@
       <h4>Pintasan keyboard</h4>
       <ul><li><b>⌘K / Ctrl+K</b> atau <b>/</b> — Spotlight</li><li><b>Esc</b> — tutup jendela</li></ul>
       <p class="note">Harga tidak tersedia di situs resmi. Spesifikasi dapat berubah sewaktu-waktu; selalu verifikasi di situs resmi Epson.
-      Epson, 3LCD dan gambar produk adalah merek/hak milik Seiko Epson Corporation.</p>
+      Epson, 3LCD dan gambar produk adalah merek/hak milik Seiko Epson Corporation. Situs ini tidak berafiliasi dengan Epson.</p>
     </div>`, "about");
   }
 
