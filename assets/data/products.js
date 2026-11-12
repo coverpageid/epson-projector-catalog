@@ -23,6 +23,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "302 x 77 x 234 mm",
   "weight": "2.4 kg",
   "specs": {
@@ -87,7 +88,7 @@ window.PRODUCTS = [
   "url": "https://www.epson.co.id/Projectors/Corporate-and-Education/Epson-EB-E600-XGA-3LCD-TKDN-Certified-Projector/p/V11H981055",
   "image": "assets/img/V11H981055.jpg",
   "category": "xga",
-  "tagline": "Proyektor XGA 3.400 lumens untuk kebutuhan pendidikan dan kantor.",
+  "tagline": "Proyektor TKDN XGA 3.400 lumens untuk kebutuhan pendidikan dan instansi.",
   "resolution": "XGA",
   "aspect": "4:3",
   "lumens": 3400,
@@ -103,6 +104,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": false,
+  "tkdn": true,
   "dimensions": "302 x 87 x 249 mm",
   "weight": "2.7 kg",
   "specs": {
@@ -192,6 +194,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.4kg",
   "specs": {
@@ -290,6 +293,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "302 x 77 x 234 mm",
   "weight": "2.5 kg",
   "specs": {
@@ -365,106 +369,13 @@ window.PRODUCTS = [
   }
  },
  {
-  "model": "EB-X500",
-  "name": "Epson EB-X500",
-  "sku": "V11H972055",
-  "url": "https://www.epson.co.id/Projectors/Corporate-and-Education/Epson-EB-X500-XGA-3LCD-Projector/p/V11H972055",
-  "image": "assets/img/V11H972055.jpg",
-  "category": "xga",
-  "tagline": "Varian distribusi XGA 3.600 lumens yang andal untuk sekolah dan instansi.",
-  "resolution": "XGA",
-  "aspect": "4:3",
-  "lumens": 3600,
-  "lumensText": "3.600 lm",
-  "contrast": "16.000:1",
-  "lightSource": "Lampu",
-  "hdmi": 1,
-  "wifiMode": "optional",
-  "wifi": true,
-  "wifiBuiltin": false,
-  "lan": false,
-  "shortThrow": false,
-  "mirroring": false,
-  "speaker": "2W",
-  "isNew": false,
-  "dimensions": "302 x 77 x 234 mm",
-  "weight": "2.5 kg",
-  "specs": {
-   "Projection Technology": {
-    "Projection Technology": "RGB liquid crystal shutter projection system (3LCD)"
-   },
-   "Brightness*1": {
-    "White Light Output (Normal/Eco)": "3,600 lm",
-    "Colour Light Output": "3,600 lm"
-   },
-   "Connectivity": {
-    "Antarmuka USB": "USB Type A: 1 (For Wireless LAN, Firmware Update, Copy OSD Settings) USB Type B: 1 (For Firmware Update, Copy OSD Settings)",
-    "Jaringan": "Wireless: Optional (ELPAP11)",
-    "Analog Input": "Composite: 1 RCA D-Sub 15pin: 1",
-    "Digital Input": "HDMI: 1 (MHL not supported)",
-    "Audio Input": "2 RCA: 1"
-   },
-   "Contrast Ratio": {
-    "Contrast Ratio": "16,000:1"
-   },
-   "Screen Size (Projected Distance)": {
-    "Standard Size": "Tele: 30” to 300” [1.07 to 10.95 m] Wide: 30” to 300” [0.89 to 9.12 m]"
-   },
-   "Geometric Correction": {
-    "Vertical/Horizontal Keystone": "±30° / ±30° (Auto Vertical Keystone only)",
-    "Quick Corner": "Yes"
-   },
-   "Operating Temperature": {
-    "Operating Temperature": "Low Altitude: 5 – 40 °C High Altitude: 5 – 35 °C (20% – 80% Humidity, No Condensation)"
-   },
-   "Operating Altitude": {
-    "Operating Altitude": "0 – 3,048 m"
-   },
-   "Start-Up Period": {
-    "Start-Up Period": "Up to 6 seconds, Warm-up Period: 30 seconds"
-   },
-   "Cool Down Period": {
-    "Cool Down Period": "Instant Off"
-   },
-   "Direct Power On/Off": {
-    "Direct Power On/Off": "Yes"
-   },
-   "Dimension Excluding Feet (W x H x D)": {
-    "Dimension Excluding Feet (W x H x D)": "302 x 77 x 234 mm"
-   },
-   "Weight": {
-    "Berat": "Approx. 2.5 kg"
-   },
-   "Air Filter": {
-    "Type": "High Efficiency Filter",
-    "Maintenance Cycle": "6,000 / 12,000 hours"
-   },
-   "Fan Noise": {
-    "Fan Noise (Normal / Eco)": "37dB / 28dB"
-   },
-   "Power": {
-    "Power Supply Voltage": "100 - 240 V AC ±10%, 50/60 Hz"
-   },
-   "Optional Wireless & Built In Lan Specifications": {
-    "Supported Speed for each Mode": "IEEE 802.11b (2.4GHz): 11 Mbps IEEE 802.11g (2.4GHz): 54 Mbps IEEE 802.11n (2.4GHz): 72.2 Mbps IEEE 802.11a (5GHz): 54Mbps IEEE 802.11n (5GHz): 150 Mbps",
-    "Wireless LAN Security": "Infrastructure: OPEN, WPA2/WPA3-PSK Access Point: OPEN, WPA2-PSK (AES)"
-   },
-   "Specifications of Main Parts": {
-    "LCD": "Native Resolution: XGA (1024 x 768) Size: 0.55” (C2fine)",
-    "Light Source": "Type: 210W UHE Life (Normal / Eco): 6,000 / 12,000 hours",
-    "Aspect Ratio": "4:3",
-    "Projection Lens": "F-Number: 1.49 – 1.72 Type: Optical Zoom (Manual) / Focus (Manual) Focal Length: 16.90 – 20.28 mm Zoom Ratio: 1 – 1.2 Throw Ratio1.48 – 1.77 (Wide to Tele)"
-   }
-  }
- },
- {
   "model": "EB-X600",
   "name": "Epson EB-X600",
   "sku": "V11H982055",
   "url": "https://www.epson.co.id/Projectors/Corporate-and-Education/Epson-EB-X600-XGA-3LCD-TKDN-Certified-Projector/p/V11H982055",
   "image": "assets/img/V11H982055.jpg",
   "category": "xga",
-  "tagline": "Proyektor XGA 3.600 lumens dilengkapi port jaringan RJ45 LAN.",
+  "tagline": "Proyektor TKDN XGA 3.600 lumens dilengkapi port jaringan RJ45 LAN.",
   "resolution": "XGA",
   "aspect": "4:3",
   "lumens": 3600,
@@ -480,6 +391,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": false,
+  "tkdn": true,
   "dimensions": "302 x 87 x 249 mm",
   "weight": "2.7 kg",
   "specs": {
@@ -582,6 +494,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.5kg",
   "specs": {
@@ -680,6 +593,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "309 x 90 x 282 mm",
   "weight": "3.1 kg",
   "specs": {
@@ -777,6 +691,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "—",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "248 x 364 x 87 mm",
   "weight": "3.0 kg (Including Standard Lens)",
   "specs": {
@@ -889,6 +804,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.5kg",
   "specs": {
@@ -982,6 +898,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "2W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "302 x 234 x 87 mm",
   "weight": "2.6kg",
   "specs": {
@@ -1081,6 +998,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "309 x 90 x 282 mm",
   "weight": "3.1 kg",
   "specs": {
@@ -1178,6 +1096,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "5W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "248 x 364 x 87 mm",
   "weight": "3.1 kg (Including Standard Lens)",
   "specs": {
@@ -1290,6 +1209,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "309 x 282 x 90 mm",
   "weight": "3.1kg",
   "specs": {
@@ -1395,6 +1315,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "16W",
   "isNew": true,
+  "tkdn": false,
   "dimensions": "309 x 282 x 90 mm",
   "weight": "3.1kg",
   "specs": {
@@ -1502,6 +1423,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "337mm x 325mm x 90mm",
   "weight": "4.6kg",
   "specs": {
@@ -1614,6 +1536,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "337mm x 325mm x 90mm",
   "weight": "4.6kg",
   "specs": {
@@ -1726,6 +1649,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "299 x 325 x 90 mm",
   "weight": "4.2kg",
   "specs": {
@@ -1838,6 +1762,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "299 x 325 x 90 mm",
   "weight": "4.2kg",
   "specs": {
@@ -1951,6 +1876,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "377 x 101 x 219 mm",
   "weight": "4.3kg",
   "specs": {
@@ -2048,6 +1974,7 @@ window.PRODUCTS = [
   "mirroring": false,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "377 x 101 x 219 mm",
   "weight": "4.4kg",
   "specs": {
@@ -2145,6 +2072,7 @@ window.PRODUCTS = [
   "mirroring": true,
   "speaker": "16W",
   "isNew": false,
+  "tkdn": false,
   "dimensions": "377 x 110 x 291 mm",
   "weight": "4.7kg",
   "specs": {
