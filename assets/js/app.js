@@ -287,7 +287,7 @@
       ["Wireless / LAN", [wifiText !== "—" && wifiText, p.lan && "RJ45 LAN"].filter(Boolean).join(" · ") || "—"],
       ["Speaker", p.speaker || "—"],
       ["TKDN + BMP", p.tkdn ? p.tkdnScore : "—"],
-      ...(p.tkdnCert ? [["No. Sertifikat TKDN", p.tkdnCert]] : []),
+      ...(p.tkdnCert ? [["No. Sertifikat TKDN", `<button class="cert-link" data-cert="${esc(p.tkdnCert)}" title="Lihat keterangan sertifikat">${esc(p.tkdnCert)} ↗</button>`, true]] : []),
       ["Berat", p.weight || "—"],
     ];
     const groups = Object.entries(p.specs);
@@ -300,7 +300,7 @@
         <h2>${esc(p.name)}</h2>
         <p class="tagline">${esc(p.tagline)}</p>
         <div class="pills">${pills(p)}</div>
-        <div class="keyspecs">${ks.map(([k, v]) => `<div class="keyspec"><small>${k}</small><b>${esc(v)}</b></div>`).join("")}</div>
+        <div class="keyspecs">${ks.map(([k, v, raw]) => `<div class="keyspec"><small>${k}</small><b>${raw ? v : esc(v)}</b></div>`).join("")}</div>
         <div class="keyspec" style="display:flex;align-items:center;gap:12px">
           <div class="ink-dots"><i style="background:${ri.color || "#0a84ff"}"></i></div>
           <div><small>Resolusi Native</small><b>${esc(p.resolution)} — ${esc(ri.pixels || "")}</b></div>
@@ -340,7 +340,7 @@
       ["Short Throw", (p) => yn(p.shortThrow), true],
       ["Screen Mirroring", (p) => yn(p.mirroring), true],
       ["TKDN + BMP", (p) => p.tkdn ? `<span class="yes">✓ ${esc(p.tkdnScore || "Ya")}</span>` : '<span class="no">—</span>', true],
-      ["No. Sertifikat TKDN", (p) => p.tkdnCert || "—"],
+      ["No. Sertifikat TKDN", (p) => p.tkdnCert ? `<button class="cert-link" data-cert="${esc(p.tkdnCert)}" title="Lihat keterangan sertifikat">${esc(p.tkdnCert)} ↗</button>` : "—", true],
       ["Speaker", (p) => p.speaker || "—"],
       ["Dimensi", (p) => p.dimensions || "—"],
       ["Berat", (p) => p.weight || "—"],
@@ -401,6 +401,7 @@
 
   /* ---------- Router ---------- */
   function route() {
+    if (location.hash.startsWith("#/cert/")) return; // ditangani cert-popup.js
     const h = decodeURIComponent(location.hash);
     let m;
     if ((m = h.match(/^#\/p\/(.+)$/))) openDetail(m[1]);
