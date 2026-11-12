@@ -143,7 +143,7 @@
   /* ---------- Filtering ---------- */
   const haystack = (p) => [p.model, p.name, p.tagline, p.sku, p.resolution, p.aspect, p.lightSource, `${p.lumens}`, p.lumensText,
     catLabel(p.category), p.wifi && "wifi wi-fi wireless", p.lan && "lan rj45 ethernet", p.shortThrow && "short throw",
-    p.mirroring && "mirroring miracast", p.tkdn && "tkdn", p.isNew && "baru new 2026"].join(" ").toLowerCase();
+    p.mirroring && "mirroring miracast", p.tkdn && `tkdn ${p.tkdnScore} ${p.tkdnCert}`, p.isNew && "baru new 2026"].join(" ").toLowerCase();
   function filtered() {
     const q = state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
     let list = P.filter((p) =>
@@ -287,6 +287,7 @@
       ["Wireless / LAN", [wifiText !== "—" && wifiText, p.lan && "RJ45 LAN"].filter(Boolean).join(" · ") || "—"],
       ["Speaker", p.speaker || "—"],
       ["TKDN + BMP", p.tkdn ? p.tkdnScore : "—"],
+      ...(p.tkdnCert ? [["No. Sertifikat TKDN", p.tkdnCert]] : []),
       ["Berat", p.weight || "—"],
     ];
     const groups = Object.entries(p.specs);
@@ -339,6 +340,7 @@
       ["Short Throw", (p) => yn(p.shortThrow), true],
       ["Screen Mirroring", (p) => yn(p.mirroring), true],
       ["TKDN + BMP", (p) => p.tkdn ? `<span class="yes">✓ ${esc(p.tkdnScore || "Ya")}</span>` : '<span class="no">—</span>', true],
+      ["No. Sertifikat TKDN", (p) => p.tkdnCert || "—"],
       ["Speaker", (p) => p.speaker || "—"],
       ["Dimensi", (p) => p.dimensions || "—"],
       ["Berat", (p) => p.weight || "—"],

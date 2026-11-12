@@ -36,10 +36,10 @@ CURATED = {
     "EB-2265U":  ("venue", "Flagship WUXGA 5.500 lumens dengan HDBaseT, Screen Mirroring & 2× HDMI.", "WUXGA", "16:10", 5500, "5.500 / 3.800 lm", "15.000:1", "Lampu", 2, "optional", True, False, True, "16W"),
 }
 NEW_2026 = {"EB-E12", "EB-X52", "EB-W53", "EB-W55", "EB-W56S", "EB-FH54"}
-# Nilai TKDN + BMP berdasarkan Katalog Produk Epson TKDN FY25 (hal. 36)
+# Data resmi TKDN Epson (Valid efektif per 28 Agustus 2026): model -> (kode, nilai_tkdn, nilai_bmp, total, no_sertifikat)
 TKDN = {
-    "EB-E600": "55,70%",
-    "EB-X600": "55,02%",
+    "EB-E600": ("V11H981055", "42,05%", "13,65%", "55,70%", "8453/SJ-IND.8/E-TKDN/9/2024"),
+    "EB-X600": ("V11H982055", "41,37%", "13,65%", "55,02%", "8509/SJ-IND.8/E-TKDN/9/2024"),
 }
 DISCONTINUED = {"EB-X500"}
 
@@ -89,11 +89,15 @@ def main():
                     print("img fail", model, e); img_file = ""
         clean_specs = {}
         if model in TKDN:
-            clean_specs["Sertifikasi TKDN (FY25)"] = {
-                "Total Nilai TKDN + BMP": TKDN[model],
+            tk_code, tk_val, tk_bmp, tk_tot, tk_cert = TKDN[model]
+            clean_specs["Sertifikasi TKDN Kemenperin RI"] = {
+                "Nomor Sertifikat TKDN": tk_cert,
+                "Kode Produk TKDN": tk_code,
+                "Nilai TKDN": tk_val,
+                "Nilai BMP": tk_bmp,
+                "Total Nilai TKDN + BMP": tk_tot,
                 "Masa Pakai Lampu (Normal / Eco)": "6.000 jam / 12.000 jam",
                 "Fitur Unggulan": "Split Screen" if model == "EB-E600" else "Split Screen, Auto Vertical Keystone, Horizontal Keystone Adjuster, Wireless Projection (Epson iProjection)",
-                "Referensi": "Katalog Produk Epson TKDN FY25 (Halaman 36)",
             }
         for c, kv in specs.items():
             if c.startswith("_") or c == "Projectors Facets": continue
@@ -124,7 +128,8 @@ def main():
             "speaker": speaker,
             "isNew": model in NEW_2026,
             "tkdn": model in TKDN,
-            "tkdnScore": TKDN.get(model, ""),
+            "tkdnScore": TKDN[model][3] if model in TKDN else "",
+            "tkdnCert": TKDN[model][4] if model in TKDN else "",
             "dimensions": dim_raw,
             "weight": weight_raw,
             "specs": clean_specs,

@@ -25,6 +25,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 77 x 234 mm",
   "weight": "2.4 kg",
   "specs": {
@@ -107,14 +108,18 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": true,
   "tkdnScore": "55,70%",
+  "tkdnCert": "8453/SJ-IND.8/E-TKDN/9/2024",
   "dimensions": "302 x 87 x 249 mm",
   "weight": "2.7 kg",
   "specs": {
-   "Sertifikasi TKDN (FY25)": {
+   "Sertifikasi TKDN Kemenperin RI": {
+    "Nomor Sertifikat TKDN": "8453/SJ-IND.8/E-TKDN/9/2024",
+    "Kode Produk TKDN": "V11H981055",
+    "Nilai TKDN": "42,05%",
+    "Nilai BMP": "13,65%",
     "Total Nilai TKDN + BMP": "55,70%",
     "Masa Pakai Lampu (Normal / Eco)": "6.000 jam / 12.000 jam",
-    "Fitur Unggulan": "Split Screen",
-    "Referensi": "Katalog Produk Epson TKDN FY25 (Halaman 36)"
+    "Fitur Unggulan": "Split Screen"
    },
    "Projection Technology": {
     "Projection Technology": "RGB liquid crystal shutter projection system (3LCD)"
@@ -204,6 +209,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.4kg",
   "specs": {
@@ -304,6 +310,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 77 x 234 mm",
   "weight": "2.5 kg",
   "specs": {
@@ -403,14 +410,18 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": true,
   "tkdnScore": "55,02%",
+  "tkdnCert": "8509/SJ-IND.8/E-TKDN/9/2024",
   "dimensions": "302 x 87 x 249 mm",
   "weight": "2.7 kg",
   "specs": {
-   "Sertifikasi TKDN (FY25)": {
+   "Sertifikasi TKDN Kemenperin RI": {
+    "Nomor Sertifikat TKDN": "8509/SJ-IND.8/E-TKDN/9/2024",
+    "Kode Produk TKDN": "V11H982055",
+    "Nilai TKDN": "41,37%",
+    "Nilai BMP": "13,65%",
     "Total Nilai TKDN + BMP": "55,02%",
     "Masa Pakai Lampu (Normal / Eco)": "6.000 jam / 12.000 jam",
-    "Fitur Unggulan": "Split Screen, Auto Vertical Keystone, Horizontal Keystone Adjuster, Wireless Projection (Epson iProjection)",
-    "Referensi": "Katalog Produk Epson TKDN FY25 (Halaman 36)"
+    "Fitur Unggulan": "Split Screen, Auto Vertical Keystone, Horizontal Keystone Adjuster, Wireless Projection (Epson iProjection)"
    },
    "Projection Technology": {
     "Projection Technology": "RGB liquid crystal shutter projection system (3LCD)"
@@ -513,6 +524,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.5kg",
   "specs": {
@@ -613,6 +625,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "309 x 90 x 282 mm",
   "weight": "3.1 kg",
   "specs": {
@@ -712,6 +725,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "248 x 364 x 87 mm",
   "weight": "3.0 kg (Including Standard Lens)",
   "specs": {
@@ -826,6 +840,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 234 x 77 mm",
   "weight": "2.5kg",
   "specs": {
@@ -921,6 +936,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "302 x 234 x 87 mm",
   "weight": "2.6kg",
   "specs": {
@@ -1022,6 +1038,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "309 x 90 x 282 mm",
   "weight": "3.1 kg",
   "specs": {
@@ -1121,6 +1138,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "248 x 364 x 87 mm",
   "weight": "3.1 kg (Including Standard Lens)",
   "specs": {
@@ -1235,6 +1253,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "309 x 282 x 90 mm",
   "weight": "3.1kg",
   "specs": {
@@ -1342,6 +1361,7 @@ window.PRODUCTS = [
   "isNew": true,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "309 x 282 x 90 mm",
   "weight": "3.1kg",
   "specs": {
@@ -1451,6 +1471,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "337mm x 325mm x 90mm",
   "weight": "4.6kg",
   "specs": {
@@ -1565,6 +1586,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "337mm x 325mm x 90mm",
   "weight": "4.6kg",
   "specs": {
@@ -1679,6 +1701,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "299 x 325 x 90 mm",
   "weight": "4.2kg",
   "specs": {
@@ -1793,6 +1816,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "299 x 325 x 90 mm",
   "weight": "4.2kg",
   "specs": {
@@ -1908,6 +1932,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "377 x 101 x 219 mm",
   "weight": "4.3kg",
   "specs": {
@@ -2007,6 +2032,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "377 x 101 x 219 mm",
   "weight": "4.4kg",
   "specs": {
@@ -2106,6 +2132,7 @@ window.PRODUCTS = [
   "isNew": false,
   "tkdn": false,
   "tkdnScore": "",
+  "tkdnCert": "",
   "dimensions": "377 x 110 x 291 mm",
   "weight": "4.7kg",
   "specs": {
